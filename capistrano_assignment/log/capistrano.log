@@ -1,0 +1,76 @@
+# Logfile created on 2016-09-06 19:06:42 +0530 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-06 19:06:42 +0530 cap staging deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [ced65142] Running /usr/bin/env mkdir -p /tmp on 127.0.0.1
+ DEBUG [ced65142] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ced65142] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-app_dev-staging-webonise.sh 0.0%
+  INFO Uploading /tmp/git-ssh-app_dev-staging-webonise.sh 100.0%
+  INFO [589e6cab] Running /usr/bin/env chmod 700 /tmp/git-ssh-app_dev-staging-webonise.sh on 127.0.0.1
+ DEBUG [589e6cab] Command: /usr/bin/env chmod 700 /tmp/git-ssh-app_dev-staging-webonise.sh
+  INFO [589e6cab] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [7f381962] Running /usr/bin/env git ls-remote --heads https://github.com/ayush-webonise/DevOps.git on 127.0.0.1
+ DEBUG [7f381962] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_dev-staging-webonise.sh" ; /usr/bin/env git ls-remote --heads https://github.com/ayush-webonise/DevOps.git )
+ DEBUG [7f381962] 	084bf7ec730baded4a31adb66ce755cbe495fff3	refs/heads/Devops_assignment
+8c3e384c70cf35cd16881dd1942d2523de34746a	refs/heads/master
+  INFO [7f381962] Finished in 2.696 seconds with exit status 0 (successful).
+  INFO [0e9b9251] Running /usr/bin/env mkdir -p /home/webonise/app_dev/shared /home/webonise/app_dev/releases on 127.0.0.1
+ DEBUG [0e9b9251] Command: /usr/bin/env mkdir -p /home/webonise/app_dev/shared /home/webonise/app_dev/releases
+  INFO [0e9b9251] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [47a1839f] Running [ -f /home/webonise/app_dev/current/REVISION ] on 127.0.0.1
+ DEBUG [47a1839f] Command: [ -f /home/webonise/app_dev/current/REVISION ]
+ DEBUG [47a1839f] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [9c395aca] Running /usr/bin/env cat /home/webonise/app_dev/current/REVISION 2>/dev/null on 127.0.0.1
+ DEBUG [9c395aca] Command: /usr/bin/env cat /home/webonise/app_dev/current/REVISION 2>/dev/null
+ DEBUG [9c395aca] 	8c3e384c70cf35cd16881dd1942d2523de34746a
+ DEBUG [9c395aca] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [743825aa] Running [ -f /home/webonise/app_dev/repo/HEAD ] on 127.0.0.1
+ DEBUG [743825aa] Command: [ -f /home/webonise/app_dev/repo/HEAD ]
+ DEBUG [743825aa] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/webonise/app_dev/repo
+ DEBUG [7fa00011] Running if test ! -d /home/webonise/app_dev/repo; then echo "Directory does not exist '/home/webonise/app_dev/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [7fa00011] Command: if test ! -d /home/webonise/app_dev/repo; then echo "Directory does not exist '/home/webonise/app_dev/repo'" 1>&2; false; fi
+ DEBUG [7fa00011] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [c7468582] Running /usr/bin/env git remote update --prune on 127.0.0.1
+ DEBUG [c7468582] Command: cd /home/webonise/app_dev/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_dev-staging-webonise.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c7468582] 	Fetching origin
+  INFO [c7468582] Finished in 2.384 seconds with exit status 0 (successful).
+ DEBUG [3d473bbf] Running if test ! -d /home/webonise/app_dev/repo; then echo "Directory does not exist '/home/webonise/app_dev/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [3d473bbf] Command: if test ! -d /home/webonise/app_dev/repo; then echo "Directory does not exist '/home/webonise/app_dev/repo'" 1>&2; false; fi
+ DEBUG [3d473bbf] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [f6cf49e8] Running /usr/bin/env mkdir -p /home/webonise/app_dev/releases/20160906133645 on 127.0.0.1
+ DEBUG [f6cf49e8] Command: cd /home/webonise/app_dev/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_dev-staging-webonise.sh" ; /usr/bin/env mkdir -p /home/webonise/app_dev/releases/20160906133645 )
+  INFO [f6cf49e8] Finished in 0.008 seconds with exit status 0 (successful).
+  INFO [8397b7e3] Running /usr/bin/env git archive master | tar -x -f - -C /home/webonise/app_dev/releases/20160906133645 on 127.0.0.1
+ DEBUG [8397b7e3] Command: cd /home/webonise/app_dev/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_dev-staging-webonise.sh" ; /usr/bin/env git archive master | tar -x -f - -C /home/webonise/app_dev/releases/20160906133645 )
+  INFO [8397b7e3] Finished in 0.008 seconds with exit status 0 (successful).
+ DEBUG [426e8f95] Running if test ! -d /home/webonise/app_dev/repo; then echo "Directory does not exist '/home/webonise/app_dev/repo'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [426e8f95] Command: if test ! -d /home/webonise/app_dev/repo; then echo "Directory does not exist '/home/webonise/app_dev/repo'" 1>&2; false; fi
+ DEBUG [426e8f95] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [cf465f47] Running /usr/bin/env git rev-list --max-count=1 master on 127.0.0.1
+ DEBUG [cf465f47] Command: cd /home/webonise/app_dev/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-app_dev-staging-webonise.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cf465f47] 	8c3e384c70cf35cd16881dd1942d2523de34746a
+ DEBUG [cf465f47] Finished in 0.007 seconds with exit status 0 (successful).
+ DEBUG [f7aeb68a] Running if test ! -d /home/webonise/app_dev/releases/20160906133645; then echo "Directory does not exist '/home/webonise/app_dev/releases/20160906133645'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [f7aeb68a] Command: if test ! -d /home/webonise/app_dev/releases/20160906133645; then echo "Directory does not exist '/home/webonise/app_dev/releases/20160906133645'" 1>&2; false; fi
+ DEBUG [f7aeb68a] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [3c87082e] Running /usr/bin/env echo "8c3e384c70cf35cd16881dd1942d2523de34746a" >> REVISION on 127.0.0.1
+ DEBUG [3c87082e] Command: cd /home/webonise/app_dev/releases/20160906133645 && /usr/bin/env echo "8c3e384c70cf35cd16881dd1942d2523de34746a" >> REVISION
+  INFO [3c87082e] Finished in 0.005 seconds with exit status 0 (successful).
+  INFO [140e2072] Running /usr/bin/env ln -s /home/webonise/app_dev/releases/20160906133645 /home/webonise/app_dev/releases/current on 127.0.0.1
+ DEBUG [140e2072] Command: /usr/bin/env ln -s /home/webonise/app_dev/releases/20160906133645 /home/webonise/app_dev/releases/current
+  INFO [140e2072] Finished in 0.004 seconds with exit status 0 (successful).
+  INFO [77f19e71] Running /usr/bin/env mv /home/webonise/app_dev/releases/current /home/webonise/app_dev on 127.0.0.1
+ DEBUG [77f19e71] Command: /usr/bin/env mv /home/webonise/app_dev/releases/current /home/webonise/app_dev
+  INFO [77f19e71] Finished in 0.004 seconds with exit status 0 (successful).
+ DEBUG [e04f89c0] Running /usr/bin/env ls -xtr /home/webonise/app_dev/releases on 127.0.0.1
+ DEBUG [e04f89c0] Command: /usr/bin/env ls -xtr /home/webonise/app_dev/releases
+ DEBUG [e04f89c0] 	20160906133304	20160906133645
+ DEBUG [e04f89c0] Finished in 0.005 seconds with exit status 0 (successful).
+ DEBUG [0a0f60c6] Running if test ! -d /home/webonise/app_dev/releases; then echo "Directory does not exist '/home/webonise/app_dev/releases'" 1>&2; false; fi on 127.0.0.1
+ DEBUG [0a0f60c6] Command: if test ! -d /home/webonise/app_dev/releases; then echo "Directory does not exist '/home/webonise/app_dev/releases'" 1>&2; false; fi
+ DEBUG [0a0f60c6] Finished in 0.003 seconds with exit status 0 (successful).
+  INFO [9aaeedee] Running /usr/bin/env echo "Branch master (at 8c3e384c70cf35cd16881dd1942d2523de34746a) deployed as release 20160906133645 by webonise" >> /home/webonise/app_dev/revisions.log on 127.0.0.1
+ DEBUG [9aaeedee] Command: cd /home/webonise/app_dev/releases && /usr/bin/env echo "Branch master (at 8c3e384c70cf35cd16881dd1942d2523de34746a) deployed as release 20160906133645 by webonise" >> /home/webonise/app_dev/revisions.log
+  INFO [9aaeedee] Finished in 0.004 seconds with exit status 0 (successful).
